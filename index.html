@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ברית מילה - הזמנה</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>הזמנה לברית מילה</h1>
+            <div class="decoration">✡️</div>
+        </header>
+
+        <section class="event-details">
+            <h2>שמחים להזמינכם</h2>
+            <p class="invite-text">אנו שמחים להזמינכם לברית המילה של בננו</p>
+            <h3 class="baby-name">[שם התינוק]</h3>
+            
+            <div class="detail-item">
+                <span class="icon">📅</span>
+                <span class="detail">יום [יום בשבוע], [תאריך עברי] - [תאריך לועזי]</span>
+            </div>
+            
+            <div class="detail-item">
+                <span class="icon">⏰</span>
+                <span class="detail">בשעה [שעה]</span>
+            </div>
+            
+            <div class="detail-item">
+                <span class="icon">📍</span>
+                <span class="detail">[מקום האירוע וכתובת]</span>
+            </div>
+            
+            <div class="detail-item">
+                <span class="icon">👪</span>
+                <span class="detail">ההורים: [שם ההורים]</span>
+            </div>
+            
+            <div class="map-container">
+                <p>מפת הגעה:</p>
+                <!-- כאן ניתן להוסיף מפה מ-Google Maps באמצעות iframe -->
+                <div class="map-placeholder">
+                    [כאן תופיע המפה - הוסיפי iframe של Google Maps]
+                </div>
+            </div>
+        </section>
+
+        <section class="rsvp-form">
+            <h2>אישור הגעה</h2>
+            <p>נשמח לאשר את הגעתכם:</p>
+            
+            <form id="confirmationForm" action="https://formsubmit.co/0533858881@whatsapp.formsubmit.co" method="POST">
+                <!-- הגדרות FormSubmit -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="" id="nextUrlField">
+                <input type="hidden" name="_subject" value="אישור הגעה חדש לברית המילה">
+                <div class="form-group">
+                    <label for="firstName">שם פרטי:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">שם משפחה:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">מספר טלפון:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">מספר אורחים:</label>
+                    <input type="number" id="guests" name="guests" min="1" value="1" required>
+                </div>
+                
+                <button type="submit" class="submit-button">אישור הגעה</button>
+            </form>
+        </section>
+        
+        <div id="confirmationMessage" class="confirmation-message hidden">
+            <h3>תודה על האישור!</h3>
+            <p>נתראה בשמחה!</p>
+        </div>
+        
+        <footer>
+            <p>נשמח לראותכם בשמחתנו!</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
