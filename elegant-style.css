@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Rubik:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #4a7fb5;      /* כחול בייבי בינוני */
+    --secondary-color: #accbee;    /* כחול בייבי בהיר */
+    --accent-color: #84a7d3;       /* כחול בייבי גוון ביניים */
+    --light-color: #f0f5fb;        /* כחול בייבי בהיר מאוד */
+    --white-color: #ffffff;        /* לבן */
+    --dark-color: #2c3e50;         /* כחול כהה */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    direction: rtl;
+}
+
+body {
+    font-family: 'Rubik', 'Heebo', sans-serif;
+    background-color: #f8fafd;
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(135deg, 
+                    rgba(240, 245, 251, 0.97) 0%, 
+                    rgba(240, 245, 251, 0.93) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--white-color);
+    box-shadow: 0 5px 25px rgba(74, 127, 181, 0.07);
+    border-radius: 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, var(--secondary-color), var(--primary-color));
+}
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(to left, transparent, var(--primary-color), transparent);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 25%;
+    width: 50%;
+    height: 1px;
+    background: var(--accent-color);
+}
+
+.decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: var(--accent-color);
+    height: 30px;
+}
+
+.decoration::before,
+.decoration::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, transparent, var(--secondary-color), transparent);
+}
+
+.decoration span {
+    margin: 0 15px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.event-details {
+    background-color: var(--light-color);
+    padding: 35px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(172, 203, 238, 0.3);
+    box-shadow: 0 3px 15px rgba(74, 127, 181, 0.03);
+}
+
+.invite-text {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 16px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.detail-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 127, 181, 0.08);
+}
+
+.icon {
+    margin-left: 18px;
+    color: var(--primary-color);
+    min-width: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.icon::before {
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.icon.calendar::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: var(--primary-color);
+    border-radius: 3px;
+    position: relative;
+}
+
+.icon.calendar::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.icon.time::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+}
+
+.icon.time::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 14px;
+    width: 7px;
+    height: 7px;
+    background: var(--primary-color);
+    border-radius: 1px;
+}
+
+.icon.location::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: var(--primary-color);
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg);
+}
+
+.icon.location::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 11px;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+}
+
+.detail {
+    font-size: 1.1rem;
+}
+
+.map-container {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.map-container p {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.map iframe {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 280px;
+}
+
+.rsvp-form {
+    background-color: var(--white-color);
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(172, 203, 238, 0.2);
+    box-shadow: 0 5px 20px rgba(74, 127, 181, 0.06);
+    margin-top: 40px;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e1e8f0;
+    border-radius: 8px;
+    font-family: 'Rubik', 'Heebo', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: var(--white-color);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(132, 167, 211, 0.2);
+}
+
+.submit-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Rubik', 'Heebo', sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+.submit-button:hover {
+    background-color: #3a6998;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 127, 181, 0.15);
+}
+
+.confirmation-message {
+    background-color: #e8f4ff;
+    color: var(--primary-color);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid rgba(172, 203, 238, 0.4);
+    box-shadow: 0 5px 15px rgba(74, 127, 181, 0.07);
+}
+
+.confirmation-message h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+/* אנימציות */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        margin: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .event-details {
+        padding: 25px;
+    }
+    
+    .rsvp-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+    
+    .container {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .detail-item {
+        padding: 12px 15px;
+    }
+    
+    .detail {
+        font-size: 1rem;
+    }
+    
+    .invite-text {
+        font-size: 1.1rem;
+    }
+}
