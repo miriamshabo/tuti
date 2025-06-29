@@ -3,106 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ברית מילה - הזמנה</title>
-    <link rel="stylesheet" href="elegant-style.css">
-    <link rel="stylesheet" href="animations.css">
+    <title>נולד לנו בן</title>
+    <link rel="stylesheet" href="modern-style.css">
 </head>
 <body>
-    <!-- אלמנטים גרפיים ברקע -->
-    <div class="bg-decoration stars-top"></div>
-    <div class="bg-decoration stars-bottom"></div>
-    <div class="bg-decoration circle-1"></div>
-    <div class="bg-decoration circle-2"></div>
-    
-    <div class="container">
-        <header>
-            <div class="baby-symbol"></div>
-            <h1>נולד לנו בן</h1>
-            <div class="title-decoration"></div>
-            <div class="decoration"><span>•</span></div>
-        </header>
+    <div class="main-container">
+        <div class="card">
+            <div class="decoration-element top-right"></div>
+            
+            <header class="header fade-in">
+                <h1 class="title">נולד לנו בן</h1>
+                <p class="subtitle">שמחים להזמינכם</p>
+            </header>
+            
+            <div class="content">
+                <section class="section slide-in">
+                    <h2 class="section-title">שמחים לבשר</h2>
+                    <div class="invite-text">
+                        אנו שמחים ונרגשים להודיעכם על הולדת בננו ומזמינים אתכם<br>
+                        להשתתף בשמחתנו ובאירוע המיוחד של בננו
+                    </div>
+                    
+                    <div class="details">
+                        <div class="detail-item">
+                            <div class="detail-icon calendar"></div>
+                            <div class="detail-content">
+                                <div class="detail-title">יום ותאריך</div>
+                                <div class="detail-text">יום שני, י"ד בניסן תשפ"ה | 14.04.2025</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon location"></div>
+                            <div class="detail-content">
+                                <div class="detail-title">מקום</div>
+                                <div class="detail-text">אסטרא ארועי בוטיק, המגרסות 3, מבשרת ציון</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon time"></div>
+                            <div class="detail-content">
+                                <div class="detail-title">שעה</div>
+                                <div class="detail-text">שעה תימסר בהמשך</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <section class="event-details">
-            <div class="wave-decoration"></div>
-            <h2>שמחים להזמינכם</h2>
-            <div class="invite-text">
-                אנו שמחים ונרגשים להודיעכם על הולדת בננו ומצפים לראותכם
-            </div>
-            <div class="decoration"><span>•</span></div>
-            
-            <div class="detail-item">
-                <span class="icon calendar"></span>
-                <div class="detail">יום שני, י"ד בניסן תשפ"ה | 14.04.2025</div>
-            </div>
-            
-            <div class="detail-item">
-                <span class="icon time"></span>
-                <div class="detail">נשמח שתשתתפו איתנו בהכנסות בננו בבריתו של אברהם</div>
-            </div>
-            
-            <div class="detail-item">
-                <span class="icon location"></span>
-                <div class="detail">אסטרא ארועי בוטיק, המגרסות 3, מבשרת ציון</div>
-            </div>
-            
-            <div class="detail-item">
-                <span class="icon time"></span>
-                <div class="detail">שעה תימסר בהמשך</div>
-            </div>
-            
-            <div class="map-container">
-                <p>מפת הגעה:</p>
-                <div class="map">
-                    <iframe width="100%" height="250" frameborder="0" style="border:0" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3390.785066117752!2d35.1479962!3d31.8022483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502d717834ebb33%3A0x4919017fcd862f20!2z15DXodeY16jXkCDXkNeV15jXmden!5e0!3m2!1siw!2sil!4v1687962510651!5m2!1siw!2sil" 
-                    allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section class="rsvp-form">
-            <div class="wave-decoration"></div>
-            <h2>אישור הגעה</h2>
-            <p>נשמח לראותכם - אנא אשרו את הגעתכם:</p>
-            
-            <form id="confirmationForm" action="https://formsubmit.co/miriamshabo25@gmail.com" method="POST">
-                <!-- הגדרות FormSubmit -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="אישור הגעה חדש לברית המילה">
-                <input type="hidden" name="_next" value="" id="formRedirectUrl">
-                <input type="hidden" name="_template" value="table">
-                <div class="form-group">
-                    <label for="firstName">שם פרטי:</label>
-                    <input type="text" id="firstName" name="firstName" required>
+                <section class="form-section slide-in">
+                    <h2 class="section-title">אישור הגעה</h2>
+                    <div class="invite-text">נשמח לראותכם - אנא אשרו את הגעתכם:</div>
+                    
+                    <form id="confirmationForm" action="https://formsubmit.co/miriamshabo25@gmail.com" method="POST">
+                        <!-- הגדרות FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="אישור הגעה חדש לאירוע">
+                        <input type="hidden" name="_next" value="" id="formRedirectUrl">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <div class="form-group">
+                            <label for="firstName">שם פרטי</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">שם משפחה</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">מספר טלפון</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="guests">מספר אורחים</label>
+                            <input type="number" id="guests" name="guests" min="1" value="1" required>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">אישור הגעה</button>
+                    </form>
+                </section>
+                
+                <div id="confirmationMessage" class="confirmation-message hidden">
+                    <h3>תודה על האישור!</h3>
+                    <p>נתראה בשמחה!</p>
                 </div>
                 
-                <div class="form-group">
-                    <label for="lastName">שם משפחה:</label>
-                    <input type="text" id="lastName" name="lastName" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">מספר טלפון:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="guests">מספר אורחים:</label>
-                    <input type="number" id="guests" name="guests" min="1" value="1" required>
-                </div>
-                
-                <button type="submit" class="submit-button">אישור הגעה</button>
-            </form>
-        </section>
-        
-        <div id="confirmationMessage" class="confirmation-message hidden">
-            <h3>תודה על האישור!</h3>
-            <p>נתראה בשמחה!</p>
+                <section class="map-section slide-in">
+                    <h2 class="section-title">מפת הגעה</h2>
+                    <div class="map-container">
+                        <p class="map-title">לנוחיותכם, מיקום האירוע:</p>
+                        <div class="map">
+                            <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3390.785066117752!2d35.1479962!3d31.8022483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502d717834ebb33%3A0x4919017fcd862f20!2z15DXodeY16jXkCDXkNeV15jXmden!5e0!3m2!1siw!2sil!4v1687962510651!5m2!1siw!2sil" 
+                            allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="footer">
+                <p>נשמח לראותכם בשמחתנו!</p>
+            </footer>
         </div>
-        
-        <footer>
-            <p>נשמח לראותכם בשמחתנו!</p>
-        </footer>
     </div>
     
     <script src="script.js"></script>
